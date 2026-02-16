@@ -64,10 +64,10 @@ source ~/.bashrc
 
 1. **Install Python** (if you don't have it): download from [python.org](https://www.python.org/downloads/) — check "Add to PATH" during install
 
-2. **Install mpv**: download from [mpv.io](https://mpv.io/installation/) or use [Scoop](https://scoop.sh/):
-   ```
-   scoop install mpv
-   ```
+2. **Install mpv** (audio player) — pick one method:
+   - **Direct download**: grab the `.7z` from [mpv.io/installation](https://mpv.io/installation/), extract it, and add the folder to your [system PATH](https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/)
+   - **Scoop** (if you have it): `scoop install mpv`
+   - **Chocolatey** (if you have it): `choco install mpv`
 
 3. **Clone or download the repo**:
    ```
