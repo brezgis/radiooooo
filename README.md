@@ -37,26 +37,56 @@ In continuous mode:
 - Python 3.7+
 - An audio player: [mpv](https://mpv.io/) (recommended) or ffplay
 
+### macOS
+
 ```bash
-# macOS
 brew install mpv
-
-# Ubuntu/Debian
-sudo apt install mpv
-```
-
-### Setup
-
-```bash
 git clone https://github.com/brezgis/radiooooo.git
 cd radiooooo
 
-# Option 1: symlink to your PATH
-ln -sf "$(pwd)/radio.py" /usr/local/bin/radio
-
-# Option 2: alias in your shell config
-echo 'alias radio="python3 ~/path/to/radiooooo/radio.py"' >> ~/.bashrc
+# Add alias for easy access
+echo 'alias radio="python3 ~/radiooooo/radio.py"' >> ~/.bashrc
+source ~/.bashrc
 ```
+
+### Linux (Ubuntu/Debian)
+
+```bash
+sudo apt install mpv
+git clone https://github.com/brezgis/radiooooo.git
+cd radiooooo
+
+echo 'alias radio="python3 ~/radiooooo/radio.py"' >> ~/.bashrc
+source ~/.bashrc
+```
+
+### Windows
+
+1. **Install Python** (if you don't have it): download from [python.org](https://www.python.org/downloads/) — check "Add to PATH" during install
+
+2. **Install mpv**: download from [mpv.io](https://mpv.io/installation/) or use [Scoop](https://scoop.sh/):
+   ```
+   scoop install mpv
+   ```
+
+3. **Clone or download the repo**:
+   ```
+   git clone https://github.com/brezgis/radiooooo.git
+   ```
+   Or just [download the ZIP](https://github.com/brezgis/radiooooo/archive/refs/heads/main.zip) and extract it.
+
+4. **Run it**:
+   ```
+   cd radiooooo
+   python radio.py italy 1970
+   ```
+
+5. **(Optional) Create a shortcut** — add a `radio.bat` file somewhere in your PATH:
+   ```bat
+   @echo off
+   python "C:\path\to\radiooooo\radio.py" %*
+   ```
+   Then you can just type `radio italy 1970` from anywhere.
 
 ## How it works
 
