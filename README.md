@@ -4,6 +4,16 @@ A terminal client for [radiooooo.com](https://radiooooo.com) — music from ever
 
 Pick a country and a decade. Hear what people were listening to.
 
+*Unofficial client — not affiliated with [radiooooo.com](https://radiooooo.com), just fond of it.*
+
+## Quickstart
+
+```bash
+git clone https://github.com/brezgis/radiooooo.git
+cd radiooooo
+python3 radio.py italy 1970   # needs mpv or ffplay — see Install below
+```
+
 ## Usage
 
 ```bash
@@ -44,9 +54,9 @@ brew install mpv
 git clone https://github.com/brezgis/radiooooo.git
 cd radiooooo
 
-# Add alias for easy access
-echo 'alias radio="python3 ~/radiooooo/radio.py"' >> ~/.bashrc
-source ~/.bashrc
+# Add alias for easy access (zsh is the macOS default shell)
+echo "alias radio='python3 $PWD/radio.py'" >> ~/.zshrc
+source ~/.zshrc
 ```
 
 ### Linux (Ubuntu/Debian)
@@ -56,7 +66,7 @@ sudo apt install mpv
 git clone https://github.com/brezgis/radiooooo.git
 cd radiooooo
 
-echo 'alias radio="python3 ~/radiooooo/radio.py"' >> ~/.bashrc
+echo "alias radio='python3 $PWD/radio.py'" >> ~/.bashrc
 source ~/.bashrc
 ```
 
@@ -78,8 +88,10 @@ source ~/.bashrc
 4. **Run it**:
    ```
    cd radiooooo
-   python radio.py italy 1970
+   python radio.py -1 italy 1970
    ```
+   The `-1` flag plays one track and exits. Continuous mode's keyboard controls
+   rely on Unix terminal input and may not work on Windows.
 
 5. **(Optional) Create a shortcut** — add a `radio.bat` file somewhere in your PATH:
    ```bat
@@ -96,3 +108,7 @@ Uses the [radiooooo.com](https://radiooooo.com) public API to fetch random track
 
 - [radiooooo.com](https://radiooooo.com) — the wonderful music time machine
 - API documentation from [radio5](https://github.com/ocvit/radio5) (Ruby adapter)
+
+## License
+
+[MIT](LICENSE)
